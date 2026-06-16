@@ -1,0 +1,31 @@
+{
+  "name": "posmotri-v-okno-fd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "check": "prettier --check --config ./config/.prettierrc './**/*.{html,css,js}'",
+    "format": "prettier --write --config ./config/.prettierrc './**/*.{html,css,js}'",
+    "lint": "stylelint '**/*.css' --config ./config/stylelint.config.js",
+    "lintfix": "stylelint '**/*.css' --fix --config ./config/stylelint.config.js",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run format && npm run lintfix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clakoxfiles/posmotri-v-okno-fd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.8.4",
+    "stylelint": "^17.13.0"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/clakoxfiles/posmotri-v-okno-fd/issues"
+  },
+  "homepage": "https://github.com/clakoxfiles/posmotri-v-okno-fd#readme"
+}
