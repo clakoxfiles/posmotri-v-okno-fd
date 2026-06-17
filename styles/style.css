@@ -236,7 +236,7 @@ ol {
   gap: 30px;
   height: 298px;
   position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__list {
@@ -276,6 +276,10 @@ ol {
   outline-offset: 1px;
 }
 
+.content__video-card {
+  display: flex;
+}
+
 .content__video-card-description-container {
   flex-grow: 1;
   max-width: 196px;
@@ -299,10 +303,6 @@ ol {
   overflow: hidden;
   font-weight: 400;
   line-height: 0.9;
-}
-
-.content__video-card {
-  display: flex;
 }
 
 .content__video-card-thumbnail {
