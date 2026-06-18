@@ -85,6 +85,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* Search */
@@ -120,7 +121,7 @@ ol {
 
 .search-form__textfield {
   appearance: none;
-  width: 225px;
+  min-width: 225px;
   font-family: inherit;
   font-size: 18px;
   border-top: solid 1px currentColor;
@@ -162,7 +163,8 @@ ol {
   background-color: #fff;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:is(:checked, :active)
+  + .search-form__pseudo-checkbox::after {
   opacity: 1;
 }
 
@@ -171,9 +173,14 @@ ol {
   text-underline-offset: 4px;
 }
 
+.search-form__checkbox:active ~ .search-form__label-text {
+  text-decoration: none;
+}
+
 /* Button */
 
 .button {
+  height: 34px;
   border: solid 1px currentColor;
   font-family: inherit;
   font-size: 1em;
@@ -204,7 +211,6 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
   align-self: flex-end;
 }
 
@@ -216,7 +222,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, sans-serif;
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
@@ -320,5 +326,4 @@ ol {
   margin-bottom: 5px;
   flex-shrink: 0;
   width: 98%; /* Так outline по краям при навигации с клавиатуры явно видно и он полностью оборачивает в фокус кнопку */
-  height: 34px;
 }
